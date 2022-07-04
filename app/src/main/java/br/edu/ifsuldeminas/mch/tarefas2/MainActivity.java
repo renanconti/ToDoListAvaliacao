@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 if (navController.getCurrentDestination().getId() == R.id.MainFragment) {
@@ -81,19 +82,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        int id = item.getItemId();
+//Navegando entre MainFragment e MainCategoryFragment, caso ID do action for igual
         if (id == R.id.action_settings) {
             if (navController.getCurrentDestination().getId() == R.id.MainFragment){
                 navController.navigate(R.id.action_MainFragment_to_MainCategoryFragment);

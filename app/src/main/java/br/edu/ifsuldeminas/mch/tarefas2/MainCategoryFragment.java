@@ -21,11 +21,11 @@ import java.util.List;
 import br.edu.ifsuldeminas.mch.tarefas2.databinding.FragmentMainCategoryBinding;
 import br.edu.ifsuldeminas.mch.tarefas2.db.CategoryDAO;
 import br.edu.ifsuldeminas.mch.tarefas2.domain.Category;
-
+//Criado a listagem de categorias
 public class MainCategoryFragment extends Fragment {
 
     private FragmentMainCategoryBinding binding;
-
+//Metodos on create
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainCategoryFragment extends Fragment {
         return binding.getRoot();
 
     }
-
+//Metodo no qual usamos para vincular a classe category puxando o fragment_main_category
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -68,7 +68,7 @@ public class MainCategoryFragment extends Fragment {
         super.onResume();
         updateCategorys();
     }
-
+//Atualizacao de categorias vinculando com a classe Category
     private void updateCategorys() {
         CategoryDAO dao = new CategoryDAO(getContext());
         List<Category> categories = dao.listAll();
@@ -78,7 +78,7 @@ public class MainCategoryFragment extends Fragment {
 
         binding.categoryList.setAdapter(adapter);
     }
-
+//Usamos o try caso a categoria esteja vinculada a Task, com o Constraint
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
@@ -93,6 +93,7 @@ public class MainCategoryFragment extends Fragment {
                         info.position);
 
                 CategoryDAO categoryDAO = new CategoryDAO(getContext());
+                //Try Para testar a categoria se possui tarefas vinculadas
                 try {
                     categoryDAO.delete(categorySelected);
                     Toast.makeText(getContext(), R.string.category_deleted,

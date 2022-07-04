@@ -19,7 +19,8 @@ public class TaskDAO extends DAO<Task> {
         super(context);
         this.context = context;
     }
-    //Salvar as task
+    //Chamar a categoria para qualquer metodo
+    //Salvar as task com a categoria
     @Override
     public void save(Task entity) {
         SQLiteDatabase database = openToRead();
@@ -33,7 +34,7 @@ public class TaskDAO extends DAO<Task> {
 
         database.close();
     }
-    //Atualizar as tasks
+    //Atualizar as tasks com a categoria
     @Override
     public void update(Task entity) {
         SQLiteDatabase database = openToWrite();
@@ -59,7 +60,7 @@ public class TaskDAO extends DAO<Task> {
 
         database.close();
     }
-
+//List Task para ListView
     @Override
     public List<Task> listAll() {
         SQLiteDatabase database = openToRead();

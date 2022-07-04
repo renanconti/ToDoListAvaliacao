@@ -37,7 +37,7 @@ public class CategoryFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TextInputEditText descriptionTIET = binding.categoryDescription;
-
+//Base adapter ou Array adapter pro ListView?
                 String description = descriptionTIET.getText().toString();
                 description = description != null ? description : "";
 

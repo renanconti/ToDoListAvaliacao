@@ -4,22 +4,25 @@
     <string name="task_fragment_title">Cadastrar tarefa</string>
     <string name="action_categories">Categorias</string>
     <string name="title_activity_form">Cadastrar Atividade</string>
+    <string name="task_updated">Tarefa atualizada</string>
+    <string name="delete_task">Concluir Tafera</string>
+    <string name="task_category_not_empty">Crie ou escolhe uma categoria</string>
+    <string name="task_done">Tarefa concluída</string>
+    <string name="delete_category">Excluir categoria</string>
+    <string name="category_description">Descrição da categoria</string>
     <string name="task_description">Descrição da Atividade</string>
     <string name="save_task">Salvar</string>
     <string name="task_saved">Tarefa salva</string>
-    <string name="task_description_empty">Descrição da tarefa não pode ser vazia</string>
+    <string name="task_description_empty">Não pode haver descrição nula</string>
     <string name="task_date">Limite</string>
     <string name="fab_description">Adiconar Tarefa</string>
-    <string name="task_done">Tarefa concluída</string>
-    <string name="task_updated">Tarefa atualizada</string>
-    <string name="delete_task">Concluir Tafera</string>
-    <string name="delete_category">Excluir categoria</string>
-    <string name="category_description">Descrição da categoria</string>
     <string name="category_saved">Categoria Salva</string>
-    <string name="category_deleted">Categoria apagada</string>
+    <string name="category_deleted">Categoria Excluida</string>
     <string name="category_fragment_title">Cadastrar categoria</string>
     <string name="category_description_empty">Descrição da categoria não pode ser vazia</string>
     <string name="category_main_fragment_title">Listagem de categorias</string>
-    <string name="error_exclusao">Esta categoria não pode ser excluída, pois está vinculada a uma tarefa!</string>
-    <string name="task_category_not_empty">Tem de existir uma categoria</string>
+    <string name="error_exclusao">A categoria não poderá ser excluída, há vinculo com uma ou mais tarefas</string>
+
+
+
 </resources>
