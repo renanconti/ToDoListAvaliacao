@@ -10,34 +10,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="600dp"
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/lista_curso_personalizada_imagem"
-            android:layout_width="30dp"
-            android:layout_height="64dp"
-            android:gravity="center_vertical"
-            android:src="@android:drawable/checkbox_on_background"
-            tools:ignore="MissingConstraints" />
         <ListView
             android:id="@+id/todo_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:minHeight="@dimen/activity_vertical_margin"
             tools:layout_editor_absoluteY="56dp" />
 
+        <ImageView
+            android:id="@+id/lista_curso_personalizada_imagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@android:drawable/checkbox_on_background"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:gravity="center_vertical"
+            android:textColor="#FF000000" />
 
     </LinearLayout>
 
-    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
